@@ -14,20 +14,24 @@ sounds = ["birdswind.mp3", "whalesocean.mp3", "airplane.mp3", "coffeeshop.mp3"]
 current_sound = 0
 sound_playing = False
 
-# Function to play the current sound
-def play_sound():
-    global sound_playing
-    if not sound_playing:
+# Function to play the current sound or stop the player
+def toggle_sound():
+    global sound_playing, current_sound
+    if sound_playing:
+        sound_playing = False
+        print("Stopping current sound")
+    else:
         sound_playing = True
         # Add code to print the current sound file
         print(f"Playing: {sounds[current_sound]}")
 
-# Function to stop the current sound
-def stop_sound():
-    global sound_playing
-    sound_playing = False
-    # Add code to print the stopping message
-    print("Stopping current sound")
+# Function to skip to the next audio and start playing it
+def skip_and_play_sound():
+    global current_sound
+    toggle_sound()  # Toggle the sound player off
+    current_sound = (current_sound + 1) % len(sounds)
+    toggle_sound()  # Toggle the sound player on and start playing the next sound
+
 
 # Function to start the timer
 def start_timer():
@@ -77,9 +81,9 @@ try:
         elif command == "l+l":
             change_light_mode()
         elif command == "m":
-            play_sound()
+            toggle_sound()
         elif command == "m+m":
-            stop_sound()
+            skip_and_play_sound()
         else:
             print("Invalid command. Please enter a valid command.")
 
@@ -87,3 +91,38 @@ except KeyboardInterrupt:
     print("Program terminated by user.")
 finally:
     print("Cleanup complete.")
+
+
+'''
+SAMPLE OUTPUTS:
+_____________________________________________
+Enter command (t, t+t, l, l+l, m, m+m): m
+Playing: birdswind.mp3
+Enter command (t, t+t, l, l+l, m, m+m): m
+Stopping current sound
+Enter command (t, t+t, l, l+l, m, m+m): m
+Playing: birdswind.mp3
+Enter command (t, t+t, l, l+l, m, m+m): m+m
+Stopping current sound
+Playing: whalesocean.mp3
+Enter command (t, t+t, l, l+l, m, m+m): m+m
+Stopping current sound
+Playing: airplane.mp3
+Enter command (t, t+t, l, l+l, m, m+m): m
+Stopping current sound
+Enter command (t, t+t, l, l+l, m, m+m): t
+Segment: A
+Segment: B
+Segment: C
+Segment: D
+Segment: E
+Segment: F
+Segment: G
+Enter command (t, t+t, l, l+l, m, m+m): l
+RGB Light Mode: Red
+Enter command (t, t+t, l, l+l, m, m+m): l+l
+RGB Light Mode: Green
+Enter command (t, t+t, l, l+l, m, m+m): l
+RGB Light Mode: Off
+_____________________________________________
+'''
