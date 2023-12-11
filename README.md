@@ -36,3 +36,5 @@ Files:
 * testSettingMachineCode.py
   * Similar code for testing through keyboard inputs and terminal outputs.
   * Meant to test the code while ensuring the hardware components aren't shortcircuited due to faulty code.
+
+<img width="45%" src="https://i.imgur.com/jclOLGS.jpg" align="left" />
