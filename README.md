@@ -1,6 +1,9 @@
 # TheNucleusMachine
 The Nucleus Machine is a simplistic study tool built with Python and Raspberry Pi, using Linux and wired hardware.
 
+<img width="45%" src="https://i.imgur.com/jclOLGS.jpg" align="right"/>
+
+
 Features:
 * Ambient Sounds Player
   * Plays different ambient sounds, or white noises.
@@ -16,17 +19,17 @@ Features:
 
 How it works:
 * Audio button:
- * Turns on the Ambient Sounds Player, playing the first audio in the queue.
- * Can skip through other audios, or go back to the initial state.
- * Components: Single button, speaker.
+  * Turns on the Ambient Sounds Player, playing the first audio in the queue.
+  * Can skip through other audios, or go back to the initial state.
+  * Components: Single button, speaker.
 * Timer button:
- * Turns on the Rotating Segment Timer, in which it repeats a spirling animation of segments F, A, B, C, D, E, G, DP.
- * The segments may be reset as desired using an additional button press at any point.
- * The animation repeats until 5 minutes is reached, at which point the DP segment will indicate that the time is over.
+  * Turns on the Rotating Segment Timer, in which it repeats a spirling animation of segments F, A, B, C, D, E, G, DP.
+  * The segments may be reset as desired using an additional button press at any point.
+  * The animation repeats until 5 minutes is reached, at which point the DP segment will indicate that the time is over.
 * LED button:
- * Turns on the LED Lights, turning on the focus mode first.
- * Another button press switches to the relax mode.
- * A 3rd click turns off the feature
+  * Turns on the LED Lights, turning on the focus mode first.
+  * Another button press switches to the relax mode.
+  * A 3rd click turns off the feature
 
 
 Files:
@@ -36,5 +39,3 @@ Files:
 * testSettingMachineCode.py
   * Similar code for testing through keyboard inputs and terminal outputs.
   * Meant to test the code while ensuring the hardware components aren't shortcircuited due to faulty code.
-
-<img width="45%" src="https://i.imgur.com/jclOLGS.jpg" align="left" />
