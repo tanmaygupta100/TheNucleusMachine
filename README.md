@@ -8,7 +8,6 @@ A simplistic study tool built with Python and Raspberry Pi 4B, running Linux and
 “The central and most important part of an object, movement, or group, forming the basis for its activity and growth.” - Oxford Languages
 
 <br/>
-<br/>
 
 
 Features:
