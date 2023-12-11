@@ -1,13 +1,15 @@
 # TheNucleusMachine
-The Nucleus Machine is a simplistic study tool built with Python and Raspberry Pi, using Linux and wired hardware.
 
 <img width="45%" src="https://i.imgur.com/jclOLGS.jpg" align="right"/>
 
+A simplistic study tool built with Python and Raspberry Pi 4B, running Linux and using wired hardware.
+<br/>
+<br/>
 
 Features:
 * Ambient Sounds Player
-  * Plays different ambient sounds, or white noises.
-  * Helps reduce auditory distractions and increase focus during work.
+  * Plays different ambient sounds or white noises.
+  * Helps reduce auditory distractions & increase focus during work.
 * Rotating Segment Timer
   * A 7-segment display displays a rotating animation.
   * The timer can be set for 5 minutes and can be interrupted or reset at any moment in time.
@@ -15,7 +17,7 @@ Features:
   * Different light modes to indicate study/break periods.
   * Focus mode uses cool lighting for more intense studying that requires deeper focus.
   * Reading/relaxing mode uses warm lighting for allowing eyes to adjust and relax.
-
+<br/>
 
 How it works:
 * Audio button:
@@ -30,7 +32,7 @@ How it works:
   * Turns on the LED Lights, turning on the focus mode first.
   * Another button press switches to the relax mode.
   * A 3rd click turns off the feature
-
+<br/>
 
 Files:
 * nucleusMachine.py
